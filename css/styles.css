@@ -2,7 +2,20 @@ body {
   color: #4A4A4A;
 }
 #display-div {
+  overflow: hidden;
+  width: 690px;
+  height: 420px;
   background-image: url(http://cdn1.thecomeback.com/wp-content/uploads/2017/07/ms-paint-xp.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  column-count: 0;
+  margin: 20px auto;
+  padding: 60px 20px 90px 70px;
+}
+#display-ul {
+  height: 270px;
+  column-count: 3;
+  list-style: none;
+  padding: 0;
+  line-height: 1em;
 }
