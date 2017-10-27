@@ -27,6 +27,7 @@ $(document).ready(function() {
   $('#user-form').submit(function(event) {
     event.preventDefault();
     $('#display-ul').empty();
+    $('img.mr-lahey').hide();
     var userNum = $('#user-input').val();
     var isReversed = false;
     if ($('input[name="reverse-check"]:checked').length) {
@@ -34,6 +35,8 @@ $(document).ready(function() {
     }
     if (!(beepBoop(userNum))) {
       $('#display-ul').text("He's dead, Jim.");
+    } else if (beepBoop(userNum, isReversed).length > 36) {
+      $('img.mr-lahey').show();
     } else {
       beepBoop(userNum, isReversed).forEach(function(each) {
         $('#display-ul').append('<li>' + each + '</li>');

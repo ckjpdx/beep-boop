@@ -19,3 +19,7 @@ body {
   padding: 0;
   line-height: 1em;
 }
+img.mr-lahey {
+  display: none;
+  height: 260px;
+}
