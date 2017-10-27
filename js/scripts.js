@@ -1,11 +1,14 @@
 function beepBoop(userNum){
   var noGood = "That's not a good number, Jerry!";
   if (userNum >= 0) {
-    String(userNum);
+    userNum = Math.ceil(Math.random() * userNum);
+    userNum = String(userNum);
     var regexOne = /1/g;
     var regexZero = /0/g;
     if (regexOne.test(userNum)) {
       return "Boop!";
+    } else {
+      return userNum;
     }
   }
   return noGood;
