@@ -1,0 +1,8 @@
+body {
+  color: #4A4A4A;
+}
+#display-div {
+  background-image: url(http://cdn1.thecomeback.com/wp-content/uploads/2017/07/ms-paint-xp.jpg);
+  background-position: center;
+  background-size: contain;
+}
