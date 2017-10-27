@@ -1,4 +1,5 @@
 # Beep-Boop
+_by Chris Johnson_
 This exam project demonstrates usage of arrays and loops.
 ## Install
 #### Git instructions:
@@ -6,12 +7,20 @@ This exam project demonstrates usage of arrays and loops.
 2. Clone project from https://github.com/noodlebrains/beep-boop.git
 3. Navigate console to directory and open with editor OR open folder in OS GUI and open index.html
 ## Specs
-Program will take a user input in the form of a number (0 and up), randomly generate a number to return between 0 and the user's number, convert it to a string, and return the output to the index.html page for viewing the results. The user may enter another number to test results without reloading the page.
+The program will check to see if the user has inputted a number of at least 1. If not, the backend logic will return false and a message will appear saying "He's dead, Jim." Otherwise, the backend logic will continue if the input is a number of at least 1 and generate a count from 1 to the number given. If the current count increment is divisible by 3 the backend logic will return a string (ie "I'm sorry, Dave...") instead of that number. If the current count contains a 1 in its composition the backend logic will return the string "Boop!". Likewise, if the current count has a 0 in it, it will return "Beep!". The process ends when the user's number is reached, at which point the results are displayed.
 #### Examples of Input / Output:
-> User input results in a number containing: 1 --> output a string "Boop!"
+> User inputs anything other than a number that's greater or equal to 1 --> display "He's dead, Jim."
 ---
-> User input results in a number containing: 0 --> output a string "Beep!"
+> Counter reaches a number divisible by 3  --> replace number with string "I'm sorry, Dave. I'm afraid I can't do that."
 ---
-> User inputs a number divisible by 3  --> output a string "I'm sorry, Dave. I'm afraid I can't do that."
+> Counter reaches a number containing: 1 --> replace number with string "Boop!"
 ---
-> User inputs a number that doesn't meet any of the other specs --> output the number that was generated.
+> Counter reaches a number containing: 0 --> replace number with string "Beep!"
+---
+> Counter reaches a number that doesn't meet any of the other specs --> display the number.
+---
+> 3 --> "Boop!", "2", "I'm sorry, Dave..."
+### Contact
+[Chris Johnson aka noodlebrains](https://github.com/noodlebrains)
+### License
+This project is open source
