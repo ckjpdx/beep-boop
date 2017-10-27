@@ -16,7 +16,6 @@ function beepBoop(userNum){
       }
     } // end for loop
     // returnArray = returnArray.join(" ");
-    console.log(returnArray);
     return returnArray;
   } // end if number
   return false;
@@ -25,12 +24,14 @@ function beepBoop(userNum){
 $(document).ready(function() {
   $('#user-form').submit(function(event) {
     event.preventDefault();
+    $('#display-ul').empty();
     var userNum = $('#user-input').val();
     if (!(beepBoop(userNum))) {
       $('#display-ul').text("He's dead, Jim.");
-    }
-    beepBoop(userNum).forEach(function(each) {
-      $('#display-ul').append('<li>' + each + '</li>');
-    }); // end for each
+    } else {
+      beepBoop(userNum).forEach(function(each) {
+        $('#display-ul').append('<li>' + each + '</li>');
+      }); // end for each
+    } // end if false / else
   }); // end form submit
 }); // end doc ready
