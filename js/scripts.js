@@ -1,4 +1,4 @@
-function beepBoop(userNum){
+function beepBoop(userNum, isReversed){
   if (userNum >= 1) {
     var returnArray = [];
     var regexOne = /1/g;
@@ -15,7 +15,9 @@ function beepBoop(userNum){
         returnArray.push(i);
       }
     } // end for loop
-    // returnArray = returnArray.join(" ");
+    if (isReversed) {
+      returnArray.reverse();
+    }
     return returnArray;
   } // end if number
   return false;
@@ -26,10 +28,14 @@ $(document).ready(function() {
     event.preventDefault();
     $('#display-ul').empty();
     var userNum = $('#user-input').val();
+    var isReversed = false;
+    if ($('input[name="reverse-check"]:checked').length) {
+      isReversed = true;
+    }
     if (!(beepBoop(userNum))) {
       $('#display-ul').text("He's dead, Jim.");
     } else {
-      beepBoop(userNum).forEach(function(each) {
+      beepBoop(userNum, isReversed).forEach(function(each) {
         $('#display-ul').append('<li>' + each + '</li>');
       }); // end for each
     } // end if false / else
