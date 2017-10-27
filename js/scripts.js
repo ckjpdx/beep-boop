@@ -23,11 +23,24 @@ function beepBoop(userNum, isReversed){
   return false;
 };
 
+function colorPicker() {
+  var color = 'rgb(';
+  for (var i = 0; i < 3; i++) {
+    color += Math.ceil(Math.random() * 255);
+    if (i < 2) {
+      color += ', '
+    }
+  }
+  color += ')';
+  return color;
+}
+
 $(document).ready(function() {
   $('#user-form').submit(function(event) {
     event.preventDefault();
     $('#display-ul').empty();
     $('img.mr-lahey').hide();
+    $('#display-div').css("color", colorPicker());
     var userNum = $('#user-input').val();
     var isReversed = false;
     if ($('input[name="reverse-check"]:checked').length) {
@@ -35,7 +48,7 @@ $(document).ready(function() {
     }
     if (!(beepBoop(userNum))) {
       $('#display-ul').text("He's dead, Jim.");
-    } else if (beepBoop(userNum, isReversed).length > 36) {
+    } else if (beepBoop(userNum).length > 36) {
       $('img.mr-lahey').show();
     } else {
       beepBoop(userNum, isReversed).forEach(function(each) {
