@@ -1,6 +1,5 @@
 function beepBoop(userNum){
-  var noGood = "That's not a good number, Jim!";
-  if (userNum >= 0) {
+  if (userNum >= 1) {
     var returnArray = [];
     var regexOne = /1/g;
     var regexZero = /0/g;
@@ -20,16 +19,17 @@ function beepBoop(userNum){
     console.log(returnArray);
     return returnArray;
   } // end if number
-  return noGood;
+  return false;
 };
 
 $(document).ready(function() {
   $('#user-form').submit(function(event) {
     event.preventDefault();
     var userNum = $('#user-input').val();
-    var returnArray = beepBoop(userNum);
-    console.log(returnArray);
-    returnArray.forEach(function(each) {
+    if (!(beepBoop(userNum))) {
+      $('#display-ul').text("He's dead, Jim.");
+    }
+    beepBoop(userNum).forEach(function(each) {
       $('#display-ul').append('<li>' + each + '</li>');
     }); // end for each
   }); // end form submit
