@@ -9,19 +9,20 @@ This exam project demonstrates usage of arrays and loops.
     * Navigate console to directory and open with editor
     * Navigate to folder in OS GUI and open index.html
 ## Specs
-The program will check to see if the user has inputted a number of at least 1. If not, the backend logic will return false and a message will appear saying "He's dead, Jim." Otherwise, the backend logic will continue if the input is a number of at least 1 and generate a count from 1 to the number given. If the current count increment is divisible by 3 the backend logic will return a string (ie "I'm sorry, Dave...") instead of that number. If the current count contains a 1 in its composition the backend logic will return the string "Boop!". Likewise, if the current count has a 0 in it, it will return "Beep!". The process ends when the user's number is reached, at which point the results are displayed.
-### Examples of Input / Output:
-> User inputs anything other than a number that's greater or equal to 1 --> display "He's dead, Jim."
+This Beep-Boop web app will take a user number above zero and return a list of numbers counting up from zero to the give user number. Some of the listed numbers will be replaced with words. If a high enough number is entered it will display an image.
 ---
-> Counter reaches a number divisible by 3  --> replace number with string "I'm sorry, Dave. I'm afraid I can't do that."
----
-> Counter reaches a number containing: 1 --> replace number with string "Boop!"
----
-> Counter reaches a number containing: 0 --> replace number with string "Beep!"
----
-> Counter reaches a number that doesn't meet any of the other specs --> display the number.
----
-> 3 --> "Boop!", "2", "I'm sorry, Dave..."
+* input a non-number
+    * abc --> He's dead, Jim
+* input a number less than 1
+    * 0 --> He's dead, Jim
+* replace a number that contains 1 with Boop!
+    * 1 --> Boop!  
+* replace a number that is divisible by 3:
+    * 3 --> Boop!, 2, I'm sorry Dave, I'm afraid I can't do that
+* replace a number that contains 0 with Beep!
+    * 10 --> Boop!, 2, I'm sorry Dave, I'm afraid I can't do that, 4, 5, I'm afraid I can't do that, 7, 8, 9, Beep!
+* input a number greater than 36:
+    * 37 --> (display an image)
 ### Contact
 [Chris Johnson aka noodlebrains](https://github.com/noodlebrains)
 ### License
