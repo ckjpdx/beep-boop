@@ -8,7 +8,7 @@ This exam project demonstrates usage of arrays and loops.
 3. Open up project:
     * Navigate console to directory and open with editor
     * Navigate to folder in OS GUI and open index.html
-## Specs  
+## Specs
 _This web app will take a user number above zero and return a list of numbers counting up from zero to the give user number. Some of the listed numbers will be replaced with words. If a high enough number is entered it will display an image._
 ---
 * input a non-number
