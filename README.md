@@ -8,8 +8,8 @@ This exam project demonstrates usage of arrays and loops.
 3. Open up project:
     * Navigate console to directory and open with editor
     * Navigate to folder in OS GUI and open index.html
-## Specs
-This Beep-Boop web app will take a user number above zero and return a list of numbers counting up from zero to the give user number. Some of the listed numbers will be replaced with words. If a high enough number is entered it will display an image.
+## Specs  
+This web app will take a user number above zero and return a list of numbers counting up from zero to the give user number. Some of the listed numbers will be replaced with words. If a high enough number is entered it will display an image.
 ---
 * input a non-number
     * abc --> He's dead, Jim
@@ -23,6 +23,7 @@ This Beep-Boop web app will take a user number above zero and return a list of n
     * 10 --> Boop!, 2, I'm sorry Dave, I'm afraid I can't do that, 4, 5, I'm afraid I can't do that, 7, 8, 9, Beep!
 * input a number greater than 36:
     * 37 --> (display an image)
+---
 ### Contact
 [Chris Johnson aka noodlebrains](https://github.com/noodlebrains)
 ### License
