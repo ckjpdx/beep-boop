@@ -11,9 +11,9 @@ This exam project demonstrates usage of arrays and loops.
 ## Specs
 _This web app will take a user number above zero and return a list of numbers counting up from zero to the give user number. Some of the listed numbers will be replaced with words. If a high enough number is entered it will display an image._
 ---
-* input a non-number
+* replace a non-number with a message
     * abc --> He's dead, Jim
-* input a number less than 1
+* replace a number less than 1 with a message
     * 0 --> He's dead, Jim
 * replace a number that contains 1 with Boop!
     * 1 --> Boop!  
